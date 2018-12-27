@@ -28,6 +28,8 @@ int secret(int a, int key) {
     } else if (a + key % 26 > 'z') {
       a = a + key % 26 - 26;
     }
+  } else {
+    a = a + key;
   }
   return a;
 }
