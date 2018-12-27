@@ -21,12 +21,16 @@ int secret(int a, int key) {
       a = a + key;
     } else if (a + key % 26 > 'Z') {
       a = a + key % 26 - 26;
+    } else {
+      a = a + key % 26;
     }
   } else if (a >= 'a' && a <= 'z') {
     if (a + key <= 'z') {
       a = a + key;
     } else if (a + key % 26 > 'z') {
       a = a + key % 26 - 26;
+    } else {
+      a = a + key % 26;
     }
   } else {
     a = a + key;
